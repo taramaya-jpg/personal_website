@@ -1,0 +1,39 @@
+{
+  "class10": {
+    "index": "010190460150",
+    "marks": {
+      "English": 65,
+      "Dzongkha": 74,
+      "History": 71,
+      "Math": 72,
+      "Science": 60,
+      "Economic": 81
+    }
+  },
+  "class12": {
+    "index": "012220220247",
+    "marks": {
+      "English": 63,
+      "Dzongkha": 76,
+      "Economic": 85,
+      "Commerce": 81,
+      "Accountancy": 67
+    }
+  },
+  "college": {
+    "index": "07230078",
+    "semester1": {
+      "BML101": 69.9,
+      "CSP101": 66,
+      "DAT101": 72,
+      "EPS101": 70
+    },
+    "semester2": {
+      "MAC101": 78.2,
+      "LAC101": 72.0,
+      "DAT102": 81,
+      "LAC102": 78,
+      "BML101": 76
+    }
+  }
+}

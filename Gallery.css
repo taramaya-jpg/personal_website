@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .gallery {
+    padding: 40px 20px;
+    text-align: center;
+    background-image: url('bg2.jpeg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    color: #4fa1e9;
+    text-decoration: none;
+  }
+  
+  .logo span {
+    color: #ff6347;
+  }
+  
+  .menu-icon {
+    display: none;
+    color: #0c0c0c;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  .navbar a:hover {
+    background-color: #4fa1e9;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: inline-block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      width: 150px;
+      padding: 10px;
+    }
+  
+    .navbar a {
+      padding: 10px;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  }
+  
+
+/* Base Styles */
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery-title h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+
+.gallery-title p {
+  font-size: 1em;
+  color: #f5f4f4;
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+/* Grid Layout */
+.gallery-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-item {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  animation: changeColor 9s infinite; /* Animation to cycle colors */
+}
+
+.item-img-circle {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+@keyframes changeColor {
+  0% { background-color: #ff9999; }   /* Light Red */
+  16% { background-color: #ffcc99; }  /* Light Orange */
+  33% { background-color: #ffff99; }  /* Light Yellow */
+  50% { background-color: #99ff99; }  /* Light Green */
+  66% { background-color: #99ccff; }  /* Light Blue */
+  83% { background-color: #cc99ff; }  /* Light Purple */
+  100% { background-color: #ff9999; } /* Return to Light Red */
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gallery-content {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-title h2 {
+      font-size: 1.5em;
+  }
+
+  .gallery-title p {
+      font-size: 0.9em;
+  }
+  
+  .gallery-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+  }
+
+  .gallery-item {
+      padding: 10px;
+  }
+
+  .item-img-circle {
+      width: 80px;
+      height: 80px;
+  }
+
+  .item-desc {
+      font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-title h2 {
+      font-size: 1.2em;
+  }
+
+  .gallery-title p {
+      font-size: 0.8em;
+  }
+  
+  .gallery-content {
+      grid-template-columns: 1fr;
+  }
+
+  .item-img-circle {
+      width: 60px;
+      height: 60px;
+  }
+
+  .item-desc {
+      font-size: 0.8em;
+  }
+}
+  
+  /* Center the gallery title */
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Fullscreen View Adjustments */
+.fullscreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+}
+
+#fullscreen-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Keeps the aspect ratio intact */
+  border: 2px solid white;
+}
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container p, .footer-container a {
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .footer-container a {
+    text-decoration: none;
+    color: #4fa1e9;
+  }
+  
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1 1 200px;
+  }
+  

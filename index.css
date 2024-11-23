@@ -1,0 +1,549 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #1f1f1d;
+  color: #f8ed7e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+/* Home Section with Background Image */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  background: url('bg2.jpeg') no-repeat center center/cover; /* Background image */
+  position: relative; /* To position the overlay */
+  padding: 10rem 9% 10rem;
+  color: #171616; /* Ensures text contrasts well */
+}
+
+/* Add a light overlay to make the image lighter */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   /* Lightens the image */
+  z-index: 1; /* Places overlay above the background image */
+}
+.home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Brighten text with shadow */
+.home-content h1,
+.home-content h3,
+.home-content p {
+  color: #fff; /* Bright white text */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds visibility */
+}
+
+.home-img img {
+  position: relative;
+  z-index: 2;
+  border: 3px solid #fff; /* White border */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+  border-radius: 10px; /* Rounded edges for aesthetics */
+}
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .home {
+    padding: 2rem 1rem;
+  }
+
+  .home-img img {
+    width: 200px; /* Scales down the image for small screens */
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 1rem;
+  }
+
+  .home-content p {
+    font-size: 0.8rem;
+  }
+
+}
+/* Position text and content above the overlay */
+.ho
+
+
+
+.logo {
+  font-size: 1.5em;
+  color: #4fa1e9;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #ff6347;
+}
+
+.menu-icon {
+  display: none;
+  color: #0c0c0c;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.navbar a:hover {
+  background-color: #4fa1e9;
+  border-radius: 5px;
+}
+
+/* Media Query for Small Screens */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: inline-block;
+    }
+  .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      width: 150px;
+      padding: 10px;
+  }
+
+  .navbar.active {
+      display: flex;
+  }
+
+  .navbar a {
+    padding: 10px;
+  }
+}
+
+:root {
+  --bg-color: #0a090911;
+  --second-bg-color: #151515;
+  --text-color: hsl(0, 0%, 4%);
+  --main-color: #33eaf4;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Home Section */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse; /* Change to row-reverse to position image on the right */
+  gap: 2rem; /* Increased gap between text and image */
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left; /* Text aligns to the left */
+  margin-top: 3rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+
+.home-content h3 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+}
+
+.home-content h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.home-content h1:hover {
+  color: var(--main-color); /* Hover effect on text */
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  max-width: 1000px;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.home-content p:hover {
+  color: var(--main-color); /* Hover effect on text */
+}
+
+.home-img {
+  border-radius: 50%;
+}
+
+.home-img img {
+  position: relative;
+  top: 3rem;
+  width: 22vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  transition: 0.45s ease-in-out;
+}
+
+.home-img img:hover {
+  box-shadow: 0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a.logo:hover {
+  color: rgb(11, 11, 11);
+  transform: scale(1.3) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: red;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: rgb(10, 41, 114);
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+/* School Info Section */
+.school-info {
+  padding: 3rem 2%;
+  text-align: center;
+  color: white; /* Ensure text is readable */
+  background: url('bg2.jpeg') no-repeat center center/cover;
+  backdrop-filter: brightness(50%);
+}
+
+.school-info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f8f8f8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text glow for better visibility */
+}
+
+/* Keep the card styling as provided earlier */
+
+/* School Info Section */
+.school-info {
+  padding: 3rem 2%;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.school-info h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #eae4e4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  gap: 1.5rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+
+.card:hover .card-content h3 {
+  color: #0056b3;
+}
+
+.card:hover .card-content p {
+  color: #333;
+}
+
+/* Unique Background Colors for Each Card */
+.card:nth-child(1) {
+  background-color: #e7f3ff;
+}
+
+.card:nth-child(2) {
+  background-color: #fff7e7;
+}
+
+.card:nth-child(3) {
+  background-color: #e7ffe7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-container p, .footer-container a {
+  color: #fff;
+  margin-bottom: 5px;
+ font-size: medium;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: #4fa1e9;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-left, .footer-right {
+  flex: 1 1 200px;
+}
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  z-index: 1; /* Ensures dropdown is above other elements */
+}
+
+.dropdown-toggle {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; /* Shows it's clickable */
+}
+
+.arrow {
+  font-size: 0.8em;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Higher z-index to ensure it's on top */
+  top: 100%; /* Places dropdown directly below the About Me link */
+  left: 0; /* Aligns dropdown to the left of the About Me link */
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #4fa1e9;
+  border-radius: 5px;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Rotate arrow on hover */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Mobile styling for dropdown */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+/* General styling for the resume section */
+.resume-link {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.resume-link p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.resume-button {
+  text-decoration: none; /* Remove underline from the link */
+}
+
+.resume-button button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.resume-button button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Optional: Add some responsive design for mobile screens */
+@media (max-width: 600px) {
+  .resume-link p {
+    font-size: 18px;
+  }
+
+  .resume-button button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

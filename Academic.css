@@ -1,0 +1,353 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    color: #4fa1e9;
+    text-decoration: none;
+  }
+  
+  .logo span {
+    color: #ff6347;
+  }
+  
+  .menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  .navbar a:hover {
+    background-color: #4fa1e9;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: inline-block;
+    }
+  
+    .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      border-radius: 8px;
+      width: 150px;
+      padding: 10px;
+    }
+  
+    .navbar a {
+      padding: 10px;
+    }
+  
+    .navbar.active {
+      display: flex;
+    }
+  }
+/* Academic Achievements Section */
+.academic-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+  url('bg2.jpeg'); 
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  text-align: center;
+  }
+  
+  .academic-container h1 {
+    font-size: 2.5em;
+    color: #efeeee;
+    margin-bottom: 20px;
+  }
+  
+  .academic-container p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  
+  .input-container {
+    margin-bottom: 40px;
+  }
+  
+  .input-container input {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .input-container button {
+    padding: 10px 15px;
+    font-size: 1.2em;
+    background-color: #2830c7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background-color: #ff6347;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #66b569;
+    color: white;
+}
+
+.input-container {
+    text-align: center;
+    margin: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d6e1d6;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Table Styles */
+.table-container {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+.marks-table th,
+.marks-table td {
+    border: 1px solid #090909;
+    padding: 10px;
+    text-align: center;
+    height: 50px; /* Fixed height for all cells */
+    overflow: hidden;
+}
+
+.marks-table th {
+    background-color: #3ee378;
+    color: rgb(237, 243, 242);
+    font-size: 1.2em;
+}
+
+.marks-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+    .marks-table {
+        font-size: 14px;
+    }
+
+    .table-container {
+        width: 95%;
+    }
+}
+  
+  button {
+    background-color: #b3bac0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .academic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  #studentImage {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .quote-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  .quote {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0d0d0d;
+    transition: color 0.3s;
+  }
+  
+  .quote:hover {
+    color: #1d11c3;
+  }
+  
+  .quote span {
+    display: block;
+    margin-top: 10px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1em;
+  }
+  
+  .marks-details li {
+    margin-bottom: 10px;
+  }
+  
+  .marks-details .marks-header {
+    font-weight: bold;
+    color: #a11e1e;
+  }
+
+  .academic-header {
+    font-weight: bold;
+    font-size: 1.5em; /* Adjust size as needed */
+    color: hsl(0, 7%, 92%); /* Initial color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .academic-header:hover {
+    color: #8f1010; /* Color on hover */
+  }
+
+
+  
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed; /* Fix footer position */
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container p, .footer-container a {
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .footer-container a {
+    text-decoration: none;
+    color: #4fa1e9;
+  }
+  
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1 1 200px;
+  }
+  /* Resume Button Style */
+.resume-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.resume-link p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.resume-button button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #2830c7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resume-button button:hover {
+  background-color: #ff6347;
+}

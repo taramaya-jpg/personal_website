@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="stylesheet" href="about.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="logo" style="font-size: 1.8rem;">Port<span>Folio.</span></a>
+  <div class="menu-container">
+    <button class="menu-icon" onclick="toggleMenu()">
+      <i class="bx bx-dots-vertical-rounded"></i>
+    </button>
+  <div class="menu-container">
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <div class="dropdown">
+        <a href="About Me.html" class="dropdown-toggle">
+          About Me <span class="arrow">&#9662;</span>
+        </a>
+        <div class="dropdown-content">
+          <a href="family.html">About My Family</a>
+          <a href="Inspiration.html">My Inspiration</a>
+        </div>
+      </div>
+      <a href="Academic Achievements.html">Academic Achievements</a>
+      <a href="Gallery.html">Gallery</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="about-container">
+  <h1>About Me</h1>
+  <p>Here's a little more about my hobbies. Hover over each card to learn more!</p>
+
+  <div class="hobbies-grid">
+    <div class="card" data-hobby="Reading">
+      <div class="card-content">
+        <h3>Reading</h3>
+        <p class="description">I love reading books, especially fiction, as it lets me explore new worlds and ideas.</p>
+      </div>
+    </div>
+    <div class="card" data-hobby="Communicating">
+      <div class="card-content">
+        <h3>Communicating</h3>
+        <p class="description">I enjoy engaging in meaningful conversations and learning from others' perspectives.</p>
+      </div>
+    </div>
+    <div class="card" data-hobby="Badminton">
+      <div class="card-content">
+        <h3>Badminton</h3>
+        <p class="description">Playing badminton is not just fun, but a great way to stay active and fit.</p>
+      </div>
+    </div>
+    <div class="card" data-hobby="Photography">
+      <div class="card-content">
+        <h3>Photography</h3>
+        <p class="description">Capturing moments through photography lets me appreciate the beauty in everyday life.</p>
+      </div>
+    </div>
+    <div class="card" data-hobby="Traveling">
+      <div class="card-content">
+        <h3>Traveling</h3>
+        <p class="description">Traveling opens my mind to new cultures and experiences, inspiring me to grow.</p>
+      </div>
+    </div>
+    <div class="card" data-hobby="Music">
+      <div class="card-content">
+        <h3>Music</h3>
+        <p class="description">Music has a way of expressing emotions and brings a sense of calm and joy to my life.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>&copy; 2024 My personal website.</p>
+      <p>Contact us: <a href="mailto:taramaya@gmail.com" style="color: #4fa1e9;">taramayalimbu@gmail.com</a></p>
+      <p>Address: Namgaycholing, Tasishogling, Bhutan</p>
+    </div>
+    <div class="footer-right">
+      <p>Follow Me:
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Tiktok</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="about.js"></script>
+<script>
+  // Toggle navigation menu for mobile view
+  function toggleMenu() {
+    document.querySelector('.navbar').classList.toggle('active');
+  }
+
+  $(document).ready(function() {
+    // jQuery hover effect for each hobby card description
+    $('.card').hover(function() {
+      $(this).find('.description').slideToggle(200);
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+      /* Overall style and colors */
+      body {
+        font-family: Arial, sans-serif;
+        background: url('bg2.jpeg') no-repeat center center fixed; /* Replace 'background.jpg' */
+        background-size: cover;
+        color: #333;
+    }
+    .container {
+        background-color: rgba(111, 251, 242, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
+
+    /* Navbar customization */
+    .navbar {
+        background-color: #41464b;
+    }
+    .navbar-brand, .nav-link {
+        color: hsl(0, 50%, 98%) !important;
+    }
+    .nav-link:hover {
+        color: hsl(237, 51%, 39%) !important;
+    }
+
+    /* Card and image styling */
+    .card {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+        color: hsl(0, 0%, 4%);
+        size: 0cap;
+    }
+    .card img.original-size {
+        object-fit: contain; /* Keep original image aspect ratio */
+        height: 250px;
+        width: 100%;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
+
+    /* Different colors for cards */
+.bg-light-yellow {
+    background-color: #4dd375;
+}
+
+.bg-light-blue {
+    background-color: #6f9ac2;
+}
+
+
+    /* Hover and icon effects */
+    .hover-effect:hover {
+        background-color: #4accde;
+        transform: scale(1.05);
+    }
+    .icon-hover:hover {
+        color: #9cabba;
+        transition: color 0.3s;
+    }
+
+    /* Accordion, modal, and other UI elements */
+    .accordion-button {
+        background-color: #4a90e2;
+        color: rgb(109, 237, 237);
+        font-weight: bold;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #337ab7;
+    }
+    .modal-content {
+        transition: transform 0.3s ease;
+    }
+    .modal.show .modal-content {
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container p, .footer-container a {
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .footer-container a {
+    text-decoration: none;
+    color: #4fa1e9;
+  }
+  
+  .footer-container a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-left, .footer-right {
+    flex: 1 1 200px;
+  }

@@ -1,0 +1,274 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg2.jpeg'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+/* Background image styling */
+.background-image {
+    background-image: url('bg2.jpeg'); /* Replace with your preferred background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+/* Styling for the heading */
+.inspirations-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(45deg, #ff7b7b, #ffac9e); /* Gradient background */
+    padding: 20px 40px;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.inspirations-heading:hover {
+    color: #fff;
+    background: linear-gradient(45deg, #ffac9e, #ff7b7b); /* Reverse the gradient */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Slightly enlarge the heading */
+}
+
+/* Adding creative lines before and after the heading */
+.inspirations-heading::before,
+.inspirations-heading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 80%;
+    background-color: #ff7b7b;
+    top: 10%;
+    transition: all 0.3s ease;
+}
+
+.inspirations-heading::before {
+    left: -30px; /* Left side line */
+    transform: scaleX(0);
+}
+
+.inspirations-heading::after {
+    right: -30px; /* Right side line */
+    transform: scaleX(0);
+}
+
+.inspirations-heading:hover::before,
+.inspirations-heading:hover::after {
+    transform: scaleX(1); /* Expand lines when hovered */
+}
+
+
+/* Inspiration cards */
+.inspiration-card {
+    background-color: #f88ed5;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.inspiration-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.inspiration-card h4 {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+.inspiration-card.active {
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    background-color: #6fdce8;
+}
+
+/* Video iframe styling */
+.inspiration-card iframe {
+    width: 100%;          /* Make video fill the card's width */
+    height: 180px;        /* Set a fixed height */
+    border-radius: 10px;
+}
+
+/* Video box styling */
+.video-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#video-frame {
+    width: 50%;
+    max-width: 500px;
+    height: 10px;
+    border: none;
+    border-radius: 10px;
+   border-color: white;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    border-color: white;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .inspiration-card {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+    }
+    .inspiration-card h4 {
+        font-size: 14px;
+    }
+
+    .video-container {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .video-container iframe {
+        height: 200px; /* Reduce height for smaller screens */
+    }
+}
+
+/* Game Section */
+.game-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.guess-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.guess-btn:hover {
+    background-color: #0056b3;
+}
+
+.message {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.game-input {
+    font-size: 20px;
+    padding: 5px;
+}
+
+@media (max-width: 480px) {
+    .inspiration-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .video-container iframe {
+        height: 180px; /* Further reduce height for very small screens */
+    }
+
+    .game-container input,
+    .game-container button {
+        padding: 10px;
+    }
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%; /* Ensures the footer spans the full width */
+    position: relative; /* Makes sure it stretches properly */
+}
+
+/* Footer container with full width */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* Ensures the footer items stretch across the full width */
+}
+
+/* Styling for footer paragraphs and links */
+.footer-container p, .footer-container a {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #4fa1e9;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+/* Left and right footer sections */
+.footer-left, .footer-right {
+    flex: 1 1 200px;
+}
+
